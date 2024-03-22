@@ -5,5 +5,5 @@
 - 😄 Pronouns: i don´t care, call me what u want
 - ⚡ Random facts About me:
   1. Minecraft is my Fav. Game 
-  2. i´m Bad at Every Shooter Game
+  2. im Bad at Every Shooter Game
 
