@@ -7,3 +7,4 @@
   1. Minecraft is my Fav. Game 
   2. im Bad at Every Shooter Game
 
+![image](https://github.com/Jettcodey/Jettcodey/assets/163922510/103abf65-d8d3-49d7-a44c-9490da169319)
