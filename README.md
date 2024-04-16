@@ -2,7 +2,7 @@
 - 👀 I’m interested in Gaming, Computer science, Networking and Modding Hard-/Software
 - 🌱 I’m currently learning C#/C/C++, Java, Python, HTML, CSS and JavaScript
 - 📫 How to reach me: just don´t.¯\_(ツ)_/¯
-- 😄 Pronouns: She/Her
+- 😄 Pronouns: He/Him
 - ⚡ Random facts About me:
   - Minecraft is my Fav. Game 
   - I love old Gaming Consoles
