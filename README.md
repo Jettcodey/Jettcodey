@@ -3,7 +3,3 @@
 - 🌱 I’m currently learning C#/C/C++, Java, Python, HTML, CSS and JavaScript
 - 📫 How to reach me: Discord: @jettcodey or just Don´t
 - 😄 Pronouns: He/Him
-- ⚡ Random facts About me:
-  - Minecraft is my Fav. Game 
-  - I love old Gaming Consoles
-  - Super Mario 64 is the first Videogame i ever Played. 
