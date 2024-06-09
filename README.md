@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @Jettcodey
 - 👀 I’m interested in Gaming, Computer science, Networking and Modding Hard-/Software
-- 🌱 I’m currently learning C#/C/C++, Rust, Lua, Java, Python, HTML, CSS and Java/TypeScript
+- 🌱 I’m currently learning C#/C/C++, Rust, Lua, Java, Python, HTML, CSS and JavaScript
 - 📫 How to reach me: Discord: @jettcodey or just Don´t
 - 😄 Pronouns: He/Him
