@@ -3,3 +3,5 @@
 - 🌱 I’m currently learning C#/C/C++, Rust, Lua, Java, Python, HTML, CSS and JavaScript
 - 📫 How to reach me: Discord: @jettcodey or just Don´t
 - 😄 Pronouns: He/Him
+
+[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31rkppeweuiu5mnunewx72dmogqu&cover_image=true&theme=natemoo-re&show_offline=true&background_color=121212&interchange=true&bar_color=53b14f&bar_color_cover=false)](https://spotify-github-profile.kittinanx.com/api/view?uid=31rkppeweuiu5mnunewx72dmogqu&redirect=true)
