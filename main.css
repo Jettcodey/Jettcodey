@@ -1,0 +1,151 @@
+/* themes/btw.bitslayn.inlineStatus/src/index.scss */
+[class^=visibleContainer] {
+  position: relative;
+  top: unset !important;
+  left: unset !important;
+  padding: 0 16px;
+}
+[class^=invisibleContainer] {
+  display: none;
+}
+[class^=statusBubbleOuter] {
+  border: unset !important;
+  box-shadow: unset;
+  max-width: fit-content;
+}
+[class^=statusBubbleOuter]::before,
+[class^=statusBubbleOuter]::after {
+  display: none;
+}
+[class^=statusBubbleOuter] [class^=content] {
+  text-align: unset;
+  max-height: unset !important;
+  -webkit-line-clamp: unset;
+}
+[class^=statusBubbleOuter] .emoji {
+  cursor: default;
+}
+[class^=statusBubble] {
+  min-width: unset;
+  padding: unset;
+  border-radius: unset;
+  background: unset;
+}
+[class*=biteSizeOuter] > div {
+  max-height: calc(100vh - 28px - var(--custom-user-popout-outside-components-height) - 158px);
+  padding-top: 158px;
+}
+[class*=biteSizeOuter] header > svg {
+  transform: translateY(-158px);
+}
+[class*=biteSizeOuter]:not([class*=userProfileOuterThemed]) header > [class^=avatar] {
+  transform: translate(16px, -97px);
+}
+[class*=biteSizeOuter][class*=userProfileOuterThemed] header > [class^=avatar] {
+  transform: translate(12px, -101px);
+}
+[class^=userPanelOuter] > div > [class^=none] {
+  padding-top: 165px;
+}
+[class^=userPanelOuter] header > svg {
+  position: fixed !important;
+  transform: translateY(-165px);
+}
+[class^=userPanelOuter] header > [class^=avatar] {
+  position: fixed !important;
+  transform: translate(16px, -93px);
+}
+[class*=fullSizeOuter] > div {
+  padding-top: 283px;
+  padding-bottom: 16px;
+}
+[class*=fullSizeOuter] header > svg {
+  transform: translateY(-283px);
+}
+[class*=fullSizeOuter] header > [class^=headerInner] > [class^=avatar] {
+  transform: translate(24px, -138px);
+}
+[class*=userProfileOuter] header {
+  min-height: unset !important;
+}
+[class*=userProfileOuter] header > svg {
+  position: absolute;
+  width: unset;
+  padding-right: 4px;
+}
+[class*=userProfileOuter] header > [class^=avatar],
+[class*=userProfileOuter] header > [class^=headerInner] > [class^=avatar] {
+  position: absolute;
+  top: unset;
+  left: unset;
+}
+[class*=userProfileOuter] header > [class^=headerInner] {
+  position: absolute;
+  padding: unset;
+}
+[class*=userProfileOuter] header > [class^=headerInner] > [class^=buttons] {
+  position: absolute;
+  padding-right: 4px;
+  margin-right: 16px;
+  top: 0;
+  right: 0;
+  transform: translateY(229px);
+}
+[class*=userProfileOuter]:not([class*=userProfileOuterThemed], [class^=userPanelOuter]) header > svg {
+  border-top-left-radius: var(--radius-sm);
+  border-top-right-radius: var(--radius-sm);
+  padding-right: unset;
+}
+[class*=userProfileOuter]:not([class*=userProfileOuterThemed], [class^=userPanelOuter]) header > [class^=headerInner] > [class^=buttons] {
+  padding-right: unset;
+}
+[class*=userProfileOuter][class*=themeContainer] > div {
+  gap: 16px;
+}
+[class*=userProfileOuter][class*=themeContainer] > div > [class^=body] > [class^=menus] {
+  padding-bottom: 16px;
+}
+[class*=userProfileOuter] > div,
+[class*=userProfileOuter] > div > [class^=none] {
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  max-height: -webkit-fill-available;
+}
+[class*=userProfileOuter] > div > header,
+[class*=userProfileOuter] > div > header > [class^=headerInner],
+[class*=userProfileOuter] > div > [class^=none] > header,
+[class*=userProfileOuter] > div > [class^=none] > header > [class^=headerInner] {
+  display: contents;
+}
+[class*=userProfileOuter] > div > header > div:not([class]),
+[class*=userProfileOuter] > div > header > [class^=headerInner] > div:not([class]),
+[class*=userProfileOuter] > div > [class^=none] > header > div:not([class]),
+[class*=userProfileOuter] > div > [class^=none] > header > [class^=headerInner] > div:not([class]) {
+  order: -1;
+}
+[class*=userProfileOuter] > div > [class^=body],
+[class*=userProfileOuter] > div > [class^=none] > [class^=body] {
+  display: contents;
+}
+[class*=userProfileOuter] > div > [class^=body] > [class^=container],
+[class*=userProfileOuter] > div > [class^=none] > [class^=body] > [class^=container] {
+  order: -2;
+  max-height: max-content;
+}
+[class*=userProfileOuter] > div > [class^=body] > *,
+[class*=userProfileOuter] > div > [class^=none] > [class^=body] > * {
+  margin: 0 16px;
+}
+[class*=userProfileOuter] > div > footer,
+[class*=userProfileOuter] > div > [class^=none] > footer {
+  padding-top: 4px;
+}
+[class*=userProfileOuter] > div > [class^=overlayBackground],
+[class*=userProfileOuter] > div > [class^=none] > [class^=overlayBackground] {
+  margin-top: unset;
+}
+[class^=userPanelOuter] > div > [class^=none] {
+  min-width: 340px;
+}
+/*# sourceMappingURL=main.css.map */
