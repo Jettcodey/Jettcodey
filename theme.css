@@ -9,8 +9,8 @@
 
 /* SETTINGS */
 :root {
-    --main-color: #2780e6;
-    --hover-color: #1e63b3;
+    --main-color: #0077ff;
+    --hover-color: #2f90ff;
     --success-color: #43b581;
     --danger-color: #982929;
     --channel-unread: var(--main-color);
@@ -3384,6 +3384,10 @@ textarea::-webkit-scrollbar {
 
 .toolbar_fc4f04 .iconWrapper_fc4f04 .iconBadge_fc4f04 {
     background-color: var(--main-color)
+}
+
+.container_fc4f04 .anchor_af404b {
+    display: none;
 }
 
 .theme-dark .container_c2739c {
