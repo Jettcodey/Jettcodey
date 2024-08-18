@@ -3390,6 +3390,10 @@ textarea::-webkit-scrollbar {
     display: none;
 }
 
+.separator_cd82a7 {
+    display: none;
+}
+
 .theme-dark .container_c2739c {
     background-color: rgba(0, 0, 0, 0)
 }
