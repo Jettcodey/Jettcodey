@@ -866,11 +866,11 @@ section > [class^=root_]::before {
 }
 /*[class^=fullSizeOuter_]:not(:has([class^=banner][style*=background-image])) > div {
   padding-top: 179px;
-}*/
+}
 [class^=fullSizeOuter_]:not(:has([class^=banner][style*=background-image])) [class^=headerInner_] > [class^=headerButtons_] {
   transform: translateY(122px);
 }
-/*[class^=fullSizeOuter_]:not(:has([class^=banner][style*=background-image])) [class^=body_] > [class^=container_] > [class^=tags] > [class^=container_] {
+[class^=fullSizeOuter_]:not(:has([class^=banner][style*=background-image])) [class^=body_] > [class^=container_] > [class^=tags] > [class^=container_] {
   top: 125px !important;
 }*/
 [class^=fullSizeOuter_] [class^=body_] > [class^=container_] {
