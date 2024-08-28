@@ -218,7 +218,7 @@ div:not([class^=customizationSection], [class*=preview]) > div:is([class^=biteSi
 [class^=fullSizeOuter] > div::before {
   content: "";
   position: absolute;
-  background-color: var(--profile-body-background-color);
+  background: rgba(0, 0, 0, .2);
   width: -webkit-fill-available;
   height: -webkit-fill-available;
   border-radius: 8px;
