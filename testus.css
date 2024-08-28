@@ -994,9 +994,9 @@ section > [class^=root_]::before {
 [class^=biteSizeOuter] header > svg > foreignObject > div:before {
   display: none;
 }
-[class^=biteSizeOuter]:not(:has([class^=banner][style*=background-image])) > div {
+/*[class^=biteSizeOuter]:not(:has([class^=banner][style*=background-image])) > div {
   padding-top: 98px;
-}
+}*/
 [class^=fullSizeOuter] > div {
   height: -webkit-fill-available;
 }
