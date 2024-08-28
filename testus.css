@@ -229,10 +229,10 @@ div:not([class^=customizationSection], [class*=preview]) > div:is([class^=biteSi
   margin-right: 20px;
   margin-bottom: 20px;
 }
-[class^=biteSizeOuter][class*=userProfileOuterUnthemed] > div::before,
+/*[class^=biteSizeOuter][class*=userProfileOuterUnthemed] > div::before,
 [class^=fullSizeOuter][class*=userProfileOuterUnthemed] > div::before {
   margin: 16px;
-}
+}*/
 [class*=activity_] > header > h1,
 [class^=fullSizeOuter_] [class*=card_] > header > h1,
 [class^=activityBiteSizePopout] > [class^=headerContainer] > h1,
@@ -866,11 +866,11 @@ section > [class^=root_]::before {
 }
 /*[class^=fullSizeOuter_]:not(:has([class^=banner][style*=background-image])) > div {
   padding-top: 179px;
-}
+}*/
 [class^=fullSizeOuter_]:not(:has([class^=banner][style*=background-image])) [class^=headerInner_] > [class^=headerButtons_] {
   transform: translateY(122px);
 }
-[class^=fullSizeOuter_]:not(:has([class^=banner][style*=background-image])) [class^=body_] > [class^=container_] > [class^=tags] > [class^=container_] {
+/*[class^=fullSizeOuter_]:not(:has([class^=banner][style*=background-image])) [class^=body_] > [class^=container_] > [class^=tags] > [class^=container_] {
   top: 125px !important;
 }*/
 [class^=fullSizeOuter_] [class^=body_] > [class^=container_] {
@@ -957,6 +957,7 @@ section > [class^=root_]::before {
 [class^=biteSizeOuter] [class^=body] > [class^=container],
 [class^=userPanelOuter] [class^=body] > [class^=container] {
   display: flex;
+  background: rgba(0, 0, 0, 0);
   flex-direction: column;
   gap: unset;
 }
@@ -973,7 +974,7 @@ section > [class^=root_]::before {
 [class^=biteSizeOuter] [class^=body] > [class^=container] > [class^=tags] > [class^=container_],
 [class^=userPanelOuter] [class^=body] > [class^=container] > [class^=tags] > [class^=container_] {
   position: absolute;
-  background-color: var(--profile-body-background-color);
+  /*background-color: var(--profile-body-background-color);*/
   border: unset;
   border-radius: 8px;
   padding: 4px;
