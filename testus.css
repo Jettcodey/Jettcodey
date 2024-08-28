@@ -828,9 +828,9 @@ section > [class^=root_]::before {
       var(--profile-gradient-end));
   gap: unset !important;
 }
-[class^=fullSizeOuter_] > div::before {
+/*[class^=fullSizeOuter_] > div::before {
   margin-top: 6px !important;
-}
+}*/
 [class^=fullSizeOuter_] [class^=fullSizeOverlayBackground_] {
   background: unset !important;
   background-color: unset !important;
@@ -929,7 +929,7 @@ section > [class^=root_]::before {
   padding-bottom: 12px;
   gap: 6px;
 }
-[class^=userPanelOuter] [class^=body] > [class^=overlayBackground]::before {
+/*[class^=userPanelOuter] [class^=body] > [class^=overlayBackground]::before {
   content: "";
   height: 1px;
   min-height: 1px;
@@ -937,7 +937,7 @@ section > [class^=root_]::before {
   margin-bottom: 12px;
   position: sticky;
   z-index: 1;
-}
+}*/
 [class^=userPanelOuter] > div > [class^=none] {
   gap: unset !important;
 }
