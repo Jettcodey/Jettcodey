@@ -33,6 +33,7 @@
     --background-shading: 0%;
     --background-overlay: rgba(0, 0, 0, 0);
     --background-image: url(https:sagesnap.de/img/Image12.png);
+	/**--background-image: url(https:sagesnap.de/nsfw/Image20.jpg);*/
     --background-position: center;
     --background-size: cover;
     --background-repeat: no-repeat;
@@ -10722,8 +10723,12 @@ code {
     background: rgba(0, 0, 0, 0)
 }
 
-#vc-spotify-player {
+/** *#vc-spotify-player {
     border-top: 1px solid var(--background-modifier-accent)
+}*/
+
+#vc-spotify-player {
+	border-bottom: none
 }
 
 #vc-spotify-player:hover [class^=barFill__] {
