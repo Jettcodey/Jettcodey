@@ -672,10 +672,10 @@ section > [class^=root_]::before {
   transform: translateY(-158px);
 }
 [class*=biteSizeOuter]:not([class*=userProfileOuterThemed]) header > [class^=avatar] {
-  transform: translate(22px, -83px);
+  transform: translate(18.5px, -90px);
 }
 [class*=biteSizeOuter][class*=userProfileOuterThemed] header > [class^=avatar] {
-  transform: translate(18px, -87px);
+  transform: translate(14.5px, -94px);
 }
 [class^=userPanelOuter] > div > [class^=none] {
   padding-top: 158px;
@@ -718,7 +718,7 @@ section > [class^=root_]::before {
 }
 [class*=userProfileOuter]:not([class^=userProfileModalOuter]) header > [class^=headerInner] > [class^=headerButtons] {
   position: absolute;
-  padding-right: 4px;
+  padding-right: 5px;
   margin-right: 16px;
   top: 0;
   right: 0;
