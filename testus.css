@@ -983,7 +983,8 @@ section > [class^=root_]::before {
   align-self: end;
 }
 [class^=biteSizeOuter] {
-  width: 340px;
+  width: 320px;
+  height: fit-content;
   box-sizing: unset;
 }
 [class^=biteSizeOuter] header > svg {
