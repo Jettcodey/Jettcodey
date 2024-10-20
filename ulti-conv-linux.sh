@@ -42,8 +42,8 @@ compress_mp4() {
     input_file="$1"
     output_file="${input_file%.*}_compressed.mp4"
     
-    echo "Compressing $input_file to reduce file size..."
-    ffmpeg -i "$input_file" -vcodec h264 -b:v 1000k -acodec aac -b:a 128k "$output_file"
+    echo "Compressing $input_file with CRF..."
+    ffmpeg -i "$input_file" -vcodec libx264 -crf 25 "$output_file"
     
     echo "Compressed file saved as $output_file"
 }
