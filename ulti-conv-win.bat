@@ -1,85 +1,127 @@
 @echo off
-:: Enhanced script for separating, merging, converting, compressing, and returning to the menu using ffmpeg
+:: Batch script for separating, merging, converting, compressing, and processing MKV files
 setlocal enabledelayedexpansion
 
 :main
-:: Loop back to the menu after each operation
 cls
 echo ----------------------------------------
 echo Choose an option:
-echo 1. Separate audio and video into 2 files
-echo 2. Merge video and audio into a single file
+echo 1. Separate audio and video
+echo 2. Merge audio and video
 echo 3. Convert MKV to MP4
-echo 4. Compress MP4 file to reduce size
-echo 5. Exit
+echo 4. Compress (reduce) MP4 file size
+echo 5. Convert and compress all MKV files in a directory
+echo 6. Exit
 echo ----------------------------------------
-set /p option="Enter your choice (1, 2, 3, 4, or 5): "
+set /p choice="Enter your choice (1-6): "
 
-if "%option%"=="1" goto separate
-if "%option%"=="2" goto merge
-if "%option%"=="3" goto convert
-if "%option%"=="4" goto compress
-if "%option%"=="5" goto end
+if "%choice%"=="1" goto separate_av
+if "%choice%"=="2" goto merge_av
+if "%choice%"=="3" goto convert_mkv_to_mp4
+if "%choice%"=="4" goto compress_mp4
+if "%choice%"=="5" goto process_all_mkv
+if "%choice%"=="6" goto end
 goto main
 
-:separate
+:separate_av
 set /p input="Enter the full path to the input video file: "
-set /p videofile="Enter the name for the output video file (without extension): "
-set /p audiofile="Enter the name for the output audio file (without extension): "
+set "output_video=%~dpn1_video.mp4"
+set "output_audio=%~dpn1_audio.aac"
 
-:: Separating video and audio (converting AAC audio to MP3)
-ffmpeg -i "%input%" -an -vcodec copy "%videofile%.mp4" -vn -acodec mp3 "%audiofile%.mp3"
+echo Separating audio and video from %input%...
+ffmpeg -i "%input%" -an -c copy "%output_video%"  :: Extract video only
+ffmpeg -i "%input%" -vn -c copy "%output_audio%"  :: Extract audio only
 
 if %ERRORLEVEL%==0 (
-    echo Separation complete! Video saved as "%videofile%.mp4" and audio saved as "%audiofile%.mp3"
+    echo Audio saved as %output_audio%
+    echo Video saved as %output_video%
 ) else (
-    echo Error during processing. Please check your file paths and try again.
+    echo Error during processing. Please check your file paths.
 )
 pause
 goto main
 
-:merge
-set /p video="Enter the full path to the video file (without audio): "
-set /p audio="Enter the full path to the audio file: "
-set /p output="Enter the name for the output merged file (without extension): "
+:merge_av
+set /p video_file="Enter the full path to the video file: "
+set /p audio_file="Enter the full path to the audio file: "
+set "output_file=%~dpn1_merged.mp4"
 
-:: Merging video and audio
-ffmpeg -i "%video%" -i "%audio%" -c copy "%output%.mp4"
+echo Merging %video_file% and %audio_file% into %output_file%...
+ffmpeg -i "%video_file%" -i "%audio_file%" -c copy "%output_file%"
 
 if %ERRORLEVEL%==0 (
-    echo Merging complete! The merged file is saved as "%output%.mp4"
+    echo Merged file saved as %output_file%
 ) else (
-    echo Error during processing. Please check your file paths and try again.
+    echo Error during processing. Please check your file paths.
 )
 pause
 goto main
 
-:convert
-set /p mkvfile="Enter the full path to the MKV file: "
-set /p mp4file="Enter the name for the output MP4 file (without extension): "
+:convert_mkv_to_mp4
+set /p input_file="Enter the MKV file path: "
+set "output_file=%~dpn1.mp4"
 
-:: Converting MKV to MP4
-ffmpeg -i "%mkvfile%" -c copy "%mp4file%.mp4"
+echo Converting %input_file% to MP4...
+ffmpeg -i "%input_file%" -c copy "%output_file%"
 
 if %ERRORLEVEL%==0 (
-    echo Conversion complete! The MKV file has been converted to "%mp4file%.mp4"
+    echo Converted file saved as %output_file%
+    echo Deleting original MKV file: %input_file%
+    del "%input_file%"
 ) else (
-    echo Error during processing. Please check your file paths and try again.
+    echo Failed to convert %input_file%.
 )
 pause
 goto main
 
-:compress
-set /p inputfile="Enter the full path to the MP4 file: "
-set /p outputfile="Enter the name for the compressed output file (without extension): "
+:compress_mp4
+set /p input_file="Enter the MP4 file path: "
+set "output_file=%~dpn1_compressed.mp4"
 
-:: Compressing MP4 (using H.264 codec with variable bitrate for size reduction)
-ffmpeg -i "%inputfile%" -vcodec libx264 -crf 25 "%outputfile%.mp4"
+echo Compressing %input_file% with CRF...
+ffmpeg -i "%input_file%" -vcodec libx264 -crf 25 "%output_file%"
 
 if %ERRORLEVEL%==0 (
-    echo Compression complete! The file has been saved as "%outputfile%.mp4"
+    echo Compressed file saved as %output_file%
+    echo Deleting uncompressed MP4 file: %input_file%
+    del "%input_file%"
 ) else (
-    echo Error during processing. Please check your file paths and try again.
+    echo Failed to compress %input_file%.
+)
+pause
+goto main
+
+:process_all_mkv
+set /p dir="Enter the directory path containing MKV files: "
+echo Processing all MKV files in %dir%...
+
+for %%f in ("%dir%\*.mkv") do (
+    if exist "%%f" (
+        echo Processing %%f...
+        set "output_file=%%~dpnf.mp4"
+        ffmpeg -i "%%f" -c copy "!output_file!"
+        
+        if %ERRORLEVEL%==0 (
+            echo Converted file saved as !output_file!
+            del "%%f"
+            echo Compressing !output_file!
+            set "compressed_file=%%~dpnf_compressed.mp4"
+            ffmpeg -i "!output_file!" -vcodec libx264 -crf 25 "!compressed_file!"
+            
+            if %ERRORLEVEL%==0 (
+                echo Compressed file saved as !compressed_file!
+                del "!output_file!"
+            ) else (
+                echo Failed to compress !output_file!.
+            )
+        ) else (
+            echo Failed to convert %%f to MP4.
+        )
+    ) else (
+        echo No MKV files found in %dir%.
+        pause
+        goto main
+    )
 )
 pause
 goto main
