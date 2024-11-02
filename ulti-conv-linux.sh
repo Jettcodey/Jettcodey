@@ -34,18 +34,48 @@ convert_mkv_to_mp4() {
     echo "Converting $input_file to MP4..."
     ffmpeg -i "$input_file" -c copy "$output_file"
     
-    echo "Converted file saved as $output_file"
+    if [ $? -eq 0 ]; then
+        echo "Converted file saved as $output_file"
+        echo "Deleting original MKV file: $input_file"
+        rm "$input_file"
+    else
+        echo "Failed to convert $input_file to MP4."
+    fi
 }
 
 # Function to compress/reduce MP4 file size
 compress_mp4() {
     input_file="$1"
     output_file="${input_file%.*}_compressed.mp4"
-    
-    echo "Compressing $input_file with CRF..."
+	
+	echo "Compressing $input_file with CRF..."
     ffmpeg -i "$input_file" -vcodec libx264 -crf 25 "$output_file"
     
-    echo "Compressed file saved as $output_file"
+    if [ $? -eq 0 ]; then
+        echo "Compressed file saved as $output_file"
+        echo "Deleting uncompressed MP4 file: $input_file"
+        rm "$input_file"
+    else
+        echo "Failed to compress $input_file."
+    fi
+}
+
+# Function to process all MKV files in a directory
+process_all_mkv() {
+    dir="$1"
+    echo "Processing all MKV files in $dir..."
+    
+    for file in "$dir"/*.mkv; do
+        if [ -f "$file" ]; then
+            echo "Processing $file..."
+            convert_mkv_to_mp4 "$file"
+            mp4_file="${file%.*}.mp4"
+            compress_mp4 "$mp4_file"
+        else
+            echo "No MKV files found in $dir."
+            break
+        fi
+    done
 }
 
 # Function to display menu and handle choices
@@ -56,8 +86,9 @@ show_menu() {
     echo "2. Merge audio and video"
     echo "3. Convert MKV to MP4"
     echo "4. Compress (reduce) MP4 file size"
-    echo "5. Exit"
-    read -p "Enter your choice (1-5): " choice
+    echo "5. Convert and compress all MKV files in a directory"
+    echo "6. Exit"
+    read -p "Enter your choice (1-6): " choice
     echo
     
     case $choice in
@@ -79,6 +110,10 @@ show_menu() {
             compress_mp4 "$input_file"
             ;;
         5)
+            read -p "Enter the directory path: " dir
+            process_all_mkv "$dir"
+            ;;
+        6)
             echo "Exiting..."
             exit 0
             ;;
