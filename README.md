@@ -1,5 +1,5 @@
 ### About Me:
-Hey, I'm Jettcodey, or Jett for short. I make R.E.P.O. mods like [MoreShopItems](https://thunderstore.io/c/repo/p/Jettcodey/MoreShopItems_Updated/) and [MenuLibExtras](https://thunderstore.io/c/repo/p/Jettcodey/MenuLibExtras/).\
+Hey, I'm Jettcodey, or Jett for short. I make Mods for [R.E.P.O.](https://store.steampowered.com/app/3241660/) like [MoreShopItems](https://thunderstore.io/c/repo/p/Jettcodey/MoreShopItems_Updated/) and [MenuLibExtras](https://thunderstore.io/c/repo/p/Jettcodey/MenuLibExtras/).\
 I also build Project Patchers and update Modding Wikis for a few other Games I'm interested in (and may make mods for in the future).
 
 #### 🌐Where you can find me:
