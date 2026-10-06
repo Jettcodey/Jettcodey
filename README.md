@@ -5,9 +5,9 @@ I also build Project Patchers and update Modding Wikis for a few other Games I'm
 #### 🌐Where you can find me:
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=flat&logo=discord&logoColor=white)](https://discord.com/users/715791748273668126)
 [![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=flat&logo=bluesky&logoColor=white)](https://bsky.app/profile/jettcodey.de)
-<!--[![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?style=flat&logo=reddit&logoColor=white)](https://www.reddit.com/user/Jettcodey/) - Fck Age verification -->
 [![Thunderstore](https://img.shields.io/badge/-Thunderstore-101028?style=flat&logo=thunderstore&logoColor=24FFAB)](https://thunderstore.io/c/repo/p/Jettcodey/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-%23FF5E5B.svg?style=flat&logo=ko-fi&logoColor=white)](https://ko-fi.com/jettcodey)
+<!--[![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?style=flat&logo=reddit&logoColor=white)](https://www.reddit.com/user/Jettcodey/) - Fck Age verification -->
 
 #### 🎶Currently Listening to:
 [![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31rkppeweuiu5mnunewx72dmogqu&cover_image=true&theme=natemoo-re&show_offline=true&background_color=121212&interchange=true&bar_color=00ffe1&bar_color_cover=false)](https://spotify-github-profile.kittinanx.com/api/view?uid=31rkppeweuiu5mnunewx72dmogqu)
