@@ -5,7 +5,7 @@ I also build Project Patchers and update Modding Wikis for a few other Games I'm
 #### 🌐Where you can find me:
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=flat&logo=discord&logoColor=white)](https://discord.com/users/715791748273668126)
 [![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=flat&logo=bluesky&logoColor=white)](https://bsky.app/profile/jettcodey.de)
-[![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?style=flat&logo=reddit&logoColor=white)](https://www.reddit.com/user/Jettcodey/)
+<!--[![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?style=flat&logo=reddit&logoColor=white)](https://www.reddit.com/user/Jettcodey/) - Fck Age verification -->
 [![Thunderstore](https://img.shields.io/badge/-Thunderstore-101028?style=flat&logo=thunderstore&logoColor=24FFAB)](https://thunderstore.io/c/repo/p/Jettcodey/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-%23FF5E5B.svg?style=flat&logo=ko-fi&logoColor=white)](https://ko-fi.com/jettcodey)
 
